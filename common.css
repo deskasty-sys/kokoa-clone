@@ -1,0 +1,172 @@
+/* ============================================
+   Reset & Base
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard",
+    "Segoe UI", "Roboto", "Noto Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #000;
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ============================================
+   Status Bar (상단 시간/배터리)
+   ============================================ */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px 6px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.status-bar__icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* ============================================
+   Navigation Bar (하단 탭)
+   ============================================ */
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px 0 18px 0;
+  background-color: #fff;
+  border-top: 1px solid #f1f1f1;
+  z-index: 10;
+}
+
+.nav-bar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #b3b3b3;
+  position: relative;
+}
+
+.nav-bar a i {
+  font-size: 22px;
+}
+
+.nav-bar a.active {
+  color: #000;
+}
+
+.nav-bar__badge {
+  position: absolute;
+  top: -4px;
+  right: -10px;
+  background-color: #ff3b30;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* ============================================
+   Screen Container (페이지 공통 박스)
+   ============================================ */
+.screen {
+  min-height: 100vh;
+  padding-bottom: 80px; /* nav-bar 공간 */
+  background-color: #fff;
+}
+
+.screen--yellow {
+  background-color: #fae100;
+}
+
+/* ============================================
+   Section Header (페이지 상단 타이틀)
+   ============================================ */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px 18px 22px;
+}
+
+.section-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.section-header__icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 19px;
+  color: #1a1a1a;
+}
+
+/* ============================================
+   큰 화면 방지: 모바일 사이즈로 고정
+   ============================================ */
+@media screen and (min-width: 451px) {
+  body {
+    background-color: #f5f5f5;
+  }
+
+  .screen {
+    max-width: 450px;
+    margin: 0 auto;
+    min-height: 100vh;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.08);
+    background-clip: padding-box;
+  }
+
+  .nav-bar {
+    max-width: 450px;
+  }
+}

@@ -1,0 +1,119 @@
+/* Chats Page */
+.search-bar {
+  margin: 0 22px 14px 22px;
+  padding: 10px 14px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+  font-size: 14px;
+}
+
+.search-bar i {
+  font-size: 14px;
+}
+
+.chat-list li {
+  display: flex;
+  gap: 14px;
+  padding: 12px 22px;
+  align-items: center;
+}
+
+.chat-list__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffd54f, #ff9800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.chat-list__avatar--blue {
+  background: linear-gradient(135deg, #64b5f6, #1976d2);
+}
+.chat-list__avatar--green {
+  background: linear-gradient(135deg, #81c784, #388e3c);
+}
+.chat-list__avatar--pink {
+  background: linear-gradient(135deg, #f48fb1, #c2185b);
+}
+.chat-list__avatar--purple {
+  background: linear-gradient(135deg, #ba68c8, #6a1b9a);
+}
+.chat-list__avatar--red {
+  background: linear-gradient(135deg, #e57373, #c62828);
+}
+
+.chat-list__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.chat-list__name {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.chat-list__last-msg {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-list__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.chat-list__time {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.chat-list__unread {
+  background-color: #ff3b30;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 2px 7px;
+  min-width: 18px;
+  text-align: center;
+}
+
+.chat-fab {
+  position: fixed;
+  bottom: 96px;
+  right: calc(50% - 203px);
+  width: 52px;
+  height: 52px;
+  background-color: #fae100;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+@media screen and (max-width: 450px) {
+  .chat-fab {
+    right: 22px;
+  }
+}

@@ -1,0 +1,100 @@
+/* Login Page */
+.login {
+  background-color: #fae100;
+  min-height: 100vh;
+  padding: 0 32px 40px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__logo {
+  text-align: center;
+  margin: 60px 0 80px 0;
+}
+
+.login__logo h1 {
+  font-size: 52px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -2px;
+  color: #1a1a1a;
+}
+
+.login__logo p {
+  margin: 12px 0 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login__form input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+
+.login__form input::placeholder {
+  color: #999;
+}
+
+.login__form input:focus {
+  background-color: #fff;
+}
+
+.login__btn {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #444;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.login__links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #333;
+}
+
+.login__links a {
+  position: relative;
+}
+
+.login__links a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 12px;
+  background-color: #777;
+}
+
+.login__bottom {
+  margin-top: auto;
+  text-align: center;
+}
+
+.login__bottom a {
+  display: inline-block;
+  font-size: 14px;
+  color: #1a1a1a;
+  padding: 12px 24px;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
